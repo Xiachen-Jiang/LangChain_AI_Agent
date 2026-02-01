@@ -2,17 +2,17 @@
 
 An intelligent AI agent that assists internal support teams by understanding user intent, calling appropriate tools, and providing clear, actionable responses.
 
-## 🎯 Overview
+## Overview
 
 This project implements a production-oriented AI support agent for a SaaS product using Node.js, TypeScript, and LangChain. The agent can:
 
-- ✅ Answer product questions from documentation
-- ✅ Create support tickets for unresolved issues  
-- ✅ Use user context to determine ticket priority
-- ✅ Make intelligent decisions about when to use tools
-- ✅ Handle errors gracefully
+- Answer product questions from documentation
+- Create support tickets for unresolved issues  
+- Use user context to determine ticket priority
+- Make intelligent decisions about when to use tools
+- Handle errors gracefully
 
-## 🏗️ Architecture
+## Architecture
 
 ### Core Components
 
@@ -32,8 +32,7 @@ src/
 │   └── user.ts           # TypeScript type definitions
 ├── config/
 │   └── llmApi.ts         # LLM configuration (Google Gemini)
-├── index.ts              # CLI interface
-└── examples.ts           # Example scenario executions
+└── index.ts              # CLI interface
 ```
 
 ### Design Decisions
@@ -97,7 +96,7 @@ I configured Google Gemini (`gemini-2.5-flash`) because:
 
 **Trade-off**: Switching to OpenAI or Anthropic is a one-line config change.
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -134,7 +133,7 @@ npm run examples
 
 This runs 5 pre-configured scenarios demonstrating different agent behaviors.
 
-## 📋 Example Scenarios
+## Example Scenarios
 
 ### Scenario 1: Documentation Question
 **Input**: "How do I reset my password?"  
@@ -156,7 +155,7 @@ This runs 5 pre-configured scenarios demonstrating different agent behaviors.
 **Expected**: Agent creates ticket as requested  
 **Tools Used**: `createTicket`
 
-## 🧪 Tool Descriptions
+## Tool Descriptions
 
 ### searchDocs(query: string)
 
@@ -186,7 +185,7 @@ Creates a support ticket in the ticketing system.
 **Mock implementation**: Generates ticket ID and stores in memory  
 **Production**: Would integrate with Zendesk, Jira, ServiceNow, etc.
 
-## 🎓 Key Learnings & Trade-offs
+## Key Learnings & Trade-offs
 
 ### What Went Well
 
@@ -216,16 +215,16 @@ Creates a support ticket in the ticketing system.
 7. **Add metrics and monitoring** (tool usage, response times, error rates)
 8. **Support multi-turn conversations** (currently stateless)
 
-## 📊 Evaluation Criteria Coverage
+## Evaluation Criteria Coverage
 
-✅ **Agent Loop**: Implemented using LangChain v1's standard `createAgent` API  
-✅ **Tool Calling**: Intelligent tool selection based on intent  
-✅ **Integration**: 3 mock tools with realistic implementations  
-✅ **Error Handling**: Try-catch blocks, validation, user-friendly messages  
-✅ **Trade-offs**: Documented in this README (see above)  
-✅ **Communication**: Clear code, comments, and documentation  
+**Agent Loop**: Implemented using LangChain v1's standard `createAgent` API  
+**Tool Calling**: Intelligent tool selection based on intent  
+**Integration**: 3 mock tools with realistic implementations  
+**Error Handling**: Try-catch blocks, validation, user-friendly messages  
+**Trade-offs**: Documented in this README (see above)  
+**Communication**: Clear code, comments, and documentation  
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -246,7 +245,7 @@ export const llm = new ChatOpenAI({
 });
 ```
 
-## 📝 Project Structure Rationale
+## Project Structure Rationale
 
 - **`agent/`**: Core agent logic separated from tools for maintainability
 - **`tools/`**: Each tool is independent, easy to test and swap implementations
