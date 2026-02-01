@@ -10,7 +10,6 @@ async function main() {
     console.log("\nExamples:");
     console.log('  npm start -- "How do I reset my password?" user-pro');
     console.log('  npm start -- "The app is crashing" user-1');
-    console.log("\nOr run examples: npm run examples");
     process.exit(0);
   }
   
@@ -27,6 +26,8 @@ async function main() {
   } else {
     console.error(`\nError: ${result.error}\n`);
   }
+
+  console.log("=".repeat(60));
 }
 
 main().catch(console.error);
