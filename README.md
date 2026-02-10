@@ -255,5 +255,4 @@ export const llm = new ChatOpenAI({
 
 ---
 
-**Stack**: Node.js, TypeScript, LangChain, Google Gemini  
-**Time**: ~6-8 hours
+**Stack**: Node.js, TypeScript, LangChain, Google Gemini 
